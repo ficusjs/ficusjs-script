@@ -1,4 +1,4 @@
-# FicusJS script
+# FicusJS script loader
 
 <img src="img/ficusjs.svg" alt="FicusJS" width="150" align="right">
 

@@ -1,6 +1,6 @@
 {
   "name": "ficusjs-script",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "FicusJS script is a loader for ES modules and ES5 Javascript",
   "main": "dist/script.js",
   "module": "dist/script.js",

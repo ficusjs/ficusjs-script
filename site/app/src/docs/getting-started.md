@@ -9,61 +9,33 @@ The easiest way to try out FicusJS script loader is using a simple example.
 Create an `index.html` file and copy the following between the `<body>` tags.
 
 ```html
-<top-nav></top-nav>
-<div id="router-outlet"></div>
+<div id="content"></div>
 
 <script type="module">
-import { createRouter } from 'https://unpkg.com/ficusjs-router?module'
-import { createComponent } from 'https://unpkg.com/ficusjs?module'
-import { render as renderer, html } from 'https://unpkg.com/lit-html?module'
+import { loadScript } from 'https://unpkg.com/ficusjs-script?module'
+const markdownToRender = `# FicusJS script loader
 
-createComponent('home-page', {
-  renderer,
-  render () {
-    return html`<div>Welcome to the home page!</div>`
-  }
-})
+Dynamically load ES modules and ES5 scripts.
 
-createComponent('page-one', {
-  renderer,
-  render () {
-    return html`<div>Welcome to the page one!</div>`
-  }
-})
+- Lazy load ES modules
+- Lazy load ES5 scripts
+- Dynamically load based on path
+- Functional programming patterns
+- Small footprint (1.3 KB gzipped for everything!)
+- No dependencies
+- Works with client-side frameworks
+`
 
-createComponent('page-two', {
-  renderer,
-  render () {
-    return html`<div>Welcome to the page two!</div>`
-  }
-})
-
-const router = createRouter([
-  { path: '', component: 'home-page' },
-  { path: '/one', component: 'page-one' },
-  { path: '/two', component: 'page-two' }
-], '#router-outlet', { mode: 'hash' })
-
-createComponent('top-nav', {
-  renderer,
-  navigateTo (path) {
-    router.push(path)
-  },
-  render () {
-    return html`
-      <nav>
-        <ul>
-          <li><button type="button" @click="${() => this.navigateTo('/')}">Home</button></li>
-          <li><button type="button" @click="${() => this.navigateTo('/one')}">Page one</button></li>
-          <li><button type="button" @click="${() => this.navigateTo('/two')}">Page two</button></li>
-        </ul>
-      </nav>
-    `
-  }
-})
+// load the ES module for marked
+loadScript('https://unpkg.com/marked@1.2.0/lib/marked.esm.js')
+  .then(mod => mod.default)
+  .then(marked => {
+    const content = document.getElementById('content')
+    content.innerHTML = marked(markdownToRender)
+  })
 </script>
 ```
 
-> Alternatively, fork this Codepen to see it in action - [https://codepen.io/ducksoupdev/pen/PoNvGwK](https://codepen.io/ducksoupdev/pen/PoNvGwK)
+> Alternatively, fork this Codepen to see it in action - [https://codepen.io/ducksoupdev/pen/abZbdbq](https://codepen.io/ducksoupdev/pen/abZbdbq)
 
 The example creates a set of page components, a page navigation component and a new router using hash mode.

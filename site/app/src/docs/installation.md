@@ -12,7 +12,7 @@ We recommend using native ES modules in the browser.
 
 ```html
 <script type="module">
-  import { loadScript } from 'https://unpkg.com/ficusjs-script?module'
+  import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
 </script>
 ```
 

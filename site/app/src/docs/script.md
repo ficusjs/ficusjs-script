@@ -22,7 +22,7 @@ Alternatively, you can use the NPM package CDN named [Unpkg](https://unpkg.com/)
 To use the [marked](https://www.npmjs.com/package/marked) package which provides an ES6 module:
 
 ```js
-import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
+import { loadScript } from 'https://cdn.skypack.dev/@ficusjs/script'
 
 // ES6 module - uses *.esm.js file name convention
 // this script won't load if ES6 is not supported
@@ -54,7 +54,7 @@ the `loadScript` function can load ES6 modules, ES5 scripts or both.
 You can load single or multiple scripts.
 
 ```js
-import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
+import { loadScript } from 'https://cdn.skypack.dev/@ficusjs/script'
 
 // load single script
 loadScript('/js/script1.esm.js')
@@ -80,8 +80,8 @@ loadScript(
 An example of using `loadScript` in a route.
 
 ```js
-import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
-import { createRouter } from 'https://unpkg.com/ficusjs-router?module'
+import { loadScript } from 'https://cdn.skypack.dev/@ficusjs/script'
+import { createRouter } from 'https://cdn.skypack.dev/@ficusjs/router'
 
 // use the loadScript to load an ES6 module for a route
 {
@@ -103,7 +103,7 @@ Using the `loadScript` function to load ES6 modules can be done in two ways:
 Loading ES6 modules is used to import bindings which are exported by the module.
 
 ```js
-import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
+import { loadScript } from 'https://cdn.skypack.dev/@ficusjs/script'
 
 // using the file name convention of *.esm.js
 loadScript('./views/home.esm.js')
@@ -157,7 +157,7 @@ Using the `loadScript` function to load ES6 modules with an ES5 fallback will de
 To use this feature, you need to pass a two-item `Array` - the first item is the ES6 module and the second item is the ES5 fallback script:
 
 ```js
-import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
+import { loadScript } from 'https://cdn.skypack.dev/@ficusjs/script'
 
 // load scripts based on file names
 loadScript(
@@ -206,7 +206,7 @@ Using the `loadScript` function to load ES5 scripts can be done in two ways:
 2. Using an object to optionally disable caching
 
 ```js
-import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
+import { loadScript } from 'https://cdn.skypack.dev/@ficusjs/script'
 
 // using the file name convention of *.esm.js
 loadScript('./views/home.iife.js')

@@ -12,20 +12,18 @@ We recommend using native ES modules in the browser.
 
 ```html
 <script type="module">
-  import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
+  import { loadScript } from 'https://cdn.skypack.dev/@ficusjs/script'
 </script>
 ```
 
-You can browse the source of the NPM package at [cdn.jsdelivr.net/npm/ficusjs-script](https://cdn.jsdelivr.net/npm/ficusjs-script/).
-
-FicusJS script loader is also available on [unpkg](https://unpkg.com/browse/ficusjs-script/).
+FicusJS script loader is available on [Skypack](https://www.skypack.dev/view/@ficusjs/script).
 
 ## NPM
 
 FicusJS script loader works nicely with build tools such as Webpack or Rollup. If you are using a NodeJS tool, you can install the NPM package.
 
 ```sh
-npm install ficusjs-script
+npm install @ficusjs/script
 ```
 
 ## Available builds

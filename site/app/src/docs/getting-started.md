@@ -12,7 +12,7 @@ Create an `index.html` file and copy the following between the `<body>` tags.
 <div id="content"></div>
 
 <script type="module">
-import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
+import { loadScript } from 'https://cdn.skypack.dev/@ficusjs/script'
 const markdownToRender = `# FicusJS script loader
 
 Dynamically load ES modules and ES5 scripts.

@@ -29,15 +29,15 @@
   "author": "Matt Levy",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "7.2.0",
-    "http-server": "0.12.3",
+    "cypress": "8.5.0",
+    "http-server": "13.0.2",
     "npm-run-all": "4.1.5",
-    "open-cli": "6.0.1",
+    "open-cli": "7.0.1",
     "replace-in-file": "6.2.0",
-    "rollup": "2.46.0",
+    "rollup": "2.58.0",
     "rollup-plugin-terser": "7.0.2",
     "standard": "16.0.3",
-    "start-server-and-test": "1.12.1"
+    "start-server-and-test": "1.14.0"
   },
   "exports": {
     ".": {

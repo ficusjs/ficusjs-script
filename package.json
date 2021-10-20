@@ -1,10 +1,11 @@
 {
   "name": "@ficusjs/script",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "FicusJS script is a loader for ES modules and ES5 Javascript",
   "main": "dist/script.js",
   "module": "dist/script.js",
   "types": "types/script.d.ts",
+  "sideEffects": false,
   "scripts": {
     "build": "rollup -i src/script.js -o dist/script.js -f es -p \"terser={mangle: { keep_fnames: true, toplevel: true, module: true }}\"",
     "postbuild": "replace-in-file \"import(r)\" \"import(/* webpackIgnore: true*/r)\" dist/script.js",
@@ -29,14 +30,14 @@
   "author": "Matt Levy",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "8.5.0",
-    "http-server": "13.0.2",
+    "cypress": "8.6.0",
+    "http-server": "14.0.0",
     "npm-run-all": "4.1.5",
     "open-cli": "7.0.1",
-    "replace-in-file": "6.2.0",
+    "replace-in-file": "6.3.1",
     "rollup": "2.58.0",
     "rollup-plugin-terser": "7.0.2",
-    "standard": "16.0.3",
+    "standard": "16.0.4",
     "start-server-and-test": "1.14.0"
   },
   "exports": {
